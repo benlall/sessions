@@ -15,6 +15,11 @@ if (isset($_POST['submit'])) {
     }
 }
 
+if (isset($_SESSION['loginname'])) {
+    header('Location: index.php');
+    die;
+}
+
 if (isset($_GET['errorlogin'])) {
     echo '<h2 class="text-center">Vous devez vous identifier pour acceder à notre site</h2>';
 }
